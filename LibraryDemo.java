@@ -46,6 +46,38 @@ public class LibraryDemo {
         library.displayCatalog();
         library.displayMembers();
         
+        // Advanced Search Demo
+        System.out.println("\n=== Advanced Search System Demo ===");
+        AdvancedSearch searchEngine = new AdvancedSearch(library);
+        
+        // Search by title
+        searchEngine.displaySearchResults("Title Search for 'Java'", 
+                                         searchEngine.searchByTitle("Java"));
+        
+        // Search by author
+        searchEngine.displaySearchResults("Author Search for 'Bloch'", 
+                                         searchEngine.searchByAuthor("Bloch"));
+        
+        // Search by genre
+        searchEngine.displaySearchResults("Programming Books", 
+                                         searchEngine.searchByGenre("Programming"));
+        
+        // Search available books
+        searchEngine.displaySearchResults("Available Books", 
+                                         searchEngine.searchAvailableBooks());
+        
+        // Search checked out books
+        searchEngine.displaySearchResults("Checked Out Books", 
+                                         searchEngine.searchCheckedOutBooks());
+        
+        // Search active members
+        searchEngine.displaySearchResults("Active Members", 
+                                         searchEngine.searchActiveMembers());
+        
+        // Advanced search
+        searchEngine.performAdvancedSearch("Design");
+        searchEngine.performAdvancedSearch("Alice");
+        
         System.out.println("\n=== Demo Complete ===");
     }
 }

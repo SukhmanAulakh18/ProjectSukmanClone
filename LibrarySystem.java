@@ -100,4 +100,13 @@ public class LibrarySystem {
         }
         return null;
     }
+    
+    // Getters for advanced search functionality
+    public List<Book> getCatalog() {
+        return new ArrayList<>(catalog);
+    }
+    
+    public List<LibraryMember> getMembers() {
+        return new ArrayList<>(members);
+    }
 }
